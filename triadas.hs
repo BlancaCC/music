@@ -44,3 +44,5 @@ cutEscalaMayor n  = take 8 $ escalaMayor n
 sacaTriada n e = take 3 $ creaEscala triada $ drop (indiceRelativo n miEscala) miEscala
   where miEscala =  escalaMayor e
 
+
+todoAcordes nota = [ (n, sacaTriada n nota) | n <- cutEscalaMayor nota]
